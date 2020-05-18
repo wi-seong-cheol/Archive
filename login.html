@@ -8,17 +8,23 @@
     <!--<meta http-equiv="refresh" content="30">--> 
     <meta name="author" content="wi seong">
     <link rel="stylesheet" href="style.css">
-    <script src="jquery-3.5.1.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
     <style>
+        @import 
+        url(index.html);
         body{
-            font-family: juaFont;
+            font-family: 'juaFont';
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            margin-top: 0;
+            margin-left: 650px;
             padding: 0;
             font-size: 20px;
+            background: url('login_img.jpg') no-repeat;
+            background-position-x: 20vw;
+            background-position-y: 6vh;
             background-color: #f4f4f4;
             text-align: auto;
         }
@@ -26,11 +32,11 @@
             content: "";
             position: absolute; z-index: 1;
             top: 0; right: 0; bottom: 0; left: 0;
-            background-color: rgba(0,0,0,.7);
+            /*background-color: rgba(0,0,0,.7);*/
         }
         .login-form {position: relative; z-index: 2;}
         .login-form h1{
-            font-size: 32px; color: #fff;
+            font-size: 32px;
             text-align: center;
             margin-bottom: 60px;
         }
@@ -67,12 +73,12 @@
         .int-area input:focus + label,
         .int-area input:valid + label {
             top: -2px;
-            font-size: 13px; color: #166cea;
+            font-size: 13px; color: #3875EA;
         }
         .btn-area{margin-top: 30px;}
         .btn-area button{
             width: 100%; height: 50px;
-            background: #166cea;
+            background: #3875EA;
             color: #fff;
             font-size: 20px;
             border:none;
@@ -90,8 +96,8 @@
         .archive-logo{
             color:#3875EA;
             text-align: center;
-            /*font-family: juaFont;
-            text-decoration: none;
+            font-family: impact;
+            /*text-decoration: none;
             font-size:3vw;
             letter-spacing:0.2vw;
             color:#3875EA;
@@ -141,34 +147,17 @@
         $(btn).on('click',function (){
             if($(id).val() == "") {
                 $(id).next('label').addClass('warning');
-                /*setTimeout(function() {
+                setTimeout(function() {
                     $('label').removeClass('warning');
-                },1500);*/
+                },1500);
             }
             else if($(pw).val() == "") {
                 $(pw).next('label').addClass('warning');
-                /*setTimeout(function() {
+                setTimeout(function() {
                     $('label').removeClass('warning');
-                },1500);*/
+                },1500);
             }
-            /*if($(id).val() == "1" && $(pw).val() == "1") {
-                href='index.html'
-            }*/
         });
-    </script>
-    <!--<form action="ReceivePage.jsp">
-        <fieldset>
-          <legend>Personal information:</legend>
-          First name:<br>
-          <input type="text" name="" value=""><br>
-          Last name:<br>
-          <input type="text" name="" value=""><br><br>
-          <input type="submit" value="Submit">
-        </fieldset>
-      </form>-->
-       
-      
-      
-
+    </script>     
 </body>
 </html>
